@@ -232,13 +232,6 @@ def main():
                     label_visibility="collapsed"
                 ).strip().lower()
         
-        with col2:
-            st.markdown("<div style='height: 50px; display: flex; align-items: center; justify-content: center;'>", unsafe_allow_html=True)
-            if st.button("🔄", use_container_width=True, key="swap_btn"):
-                from_unit, to_unit = to_unit, from_unit  # noqa: F821
-                st.session_state.from_unit = from_unit
-                st.session_state.to_unit = to_unit
-            st.markdown("</div>", unsafe_allow_html=True)
         
         with col3:
             if conversion_type == "Currency":
